@@ -45,7 +45,7 @@ This repository distributes the SDK as a **Swift Package** of pre-built, code-si
 IDmission ships several iOS SDK flavours. They share one API surface; they differ in how much processing runs
 on the device versus on the IDmission platform, and therefore in binary size and offline capability.
 
-| Capability | **Medium** (this SDK) | [Lite](https://github.com/Idmission-LLC/identityLiteSDK-SPM) | [Liveness](https://github.com/Idmission-LLC/identityLivenessSDK-SPM) |
+| Capability | **Medium** (this SDK) | [Lite](https://github.com/idmission/identityLiteSDK-SPM) | [Liveness](https://github.com/idmission/identityLivenessSDK-SPM) |
 |:---|:---:|:---:|:---:|
 | Document detection, rotate and crop | On device | On device | — |
 | Document realness | On device | On server | — |
@@ -133,7 +133,7 @@ publishes newer versions.
 2. Enter the package URL:
 
    ```
-   https://github.com/Idmission-LLC/identityMediumSDK-SPM
+   https://github.com/idmission/identityMediumSDK-SPM
    ```
 
 3. Choose the **Dependency Rule** for the release you want to install:
@@ -169,7 +169,7 @@ let package = Package(
     platforms: [.iOS("15.6")],
     dependencies: [
         .package(
-            url: "https://github.com/Idmission-LLC/identityMediumSDK-SPM",
+            url: "https://github.com/idmission/identityMediumSDK-SPM",
             from: "11.1.19"        // 11.1.19 up to, but not including, 12.0.0
         )
     ],
@@ -195,7 +195,7 @@ To install a **pre-release**, pin the dependency to its exact tag instead:
 ```swift
 dependencies: [
     .package(
-        url: "https://github.com/Idmission-LLC/identityMediumSDK-SPM",
+        url: "https://github.com/idmission/identityMediumSDK-SPM",
         exact: "X.Y.Z-rc.n"      // replace with the pre-release tag
     )
 ],
@@ -208,13 +208,13 @@ repository for you, make sure Xcode has a GitHub account configured with access
 (**Xcode → Settings → Accounts**), or use the SSH form of the URL:
 
 ```
-git@github.com:Idmission-LLC/identityMediumSDK-SPM.git
+git@github.com:idmission/identityMediumSDK-SPM.git
 ```
 
 For CI, provide a deploy key or a personal access token with `repo` read scope.
 
 The SDK binaries are not in this repository. Swift Package Manager downloads them from the public
-[ios-sdk-releases](https://github.com/Idmission-LLC/ios-sdk-releases/releases) GitHub releases and checks each
+[ios-sdk-releases](https://github.com/idmission/ios-sdk-releases/releases) GitHub releases and checks each
 one against the checksum in `Package.swift`, so your build machines need HTTPS access to `github.com` and
 `release-assets.githubusercontent.com`.
 
@@ -1170,7 +1170,7 @@ version across all of them.
 | Privacy | <privacyteam@idmission.com> |
 | Web | <https://www.idmission.com> |
 
-Sample application: [MediumSDK2Sample](https://github.com/Idmission-LLC/MediumSDK2Sample)
+Sample application: [MediumSDK2Sample](https://github.com/idmission/MediumSDK2Sample)
 
 When reporting an issue, include your SDK version, iOS version, device model, the `requestID` of a failing
 transaction, and the `updateInitialization` log if the problem occurs at startup.
